@@ -29,8 +29,8 @@ def input_image_setup(uploaded_file):
     else:
         raise FileNotFoundError("No file uploaded")
 
-st.set_page_config(page_title="Calories advisor App")
-st.header("gemini health app")
+st.set_page_config(page_title="SnapNutriAI")
+st.header("Visualize Your Nutrition Journey here !!!")
 uploaded_file = st.file_uploader("choose an Image....",type=["jpg","jpeg","png"])
 
 image=""
@@ -41,7 +41,7 @@ if uploaded_file is not None:
 submit = st.button("Tell me about calories")
 
 input_prompt="""
-You are an expert in nutritionist where you need to see the food items from the image
+You are an expert in nutritionist where you need to see the food items and items name from the image
                and calculate the total calories, also provide the details of every food items with calories intake
                is below format
 
